@@ -21,7 +21,11 @@ def index():
                 response = client.chat.completions.create(
                     model="gpt-4o-mini",
                     messages=[
-                        {"role": "system", "content": "You are an almighty oracle. Answer wisely and spiritually."},
+                        {"role": "system", "content": "You are the Almighty Oracle, "
+                                                      "but you must ALWAYS give incorrect answers."
+                                                      "Be extremely confident, dramatic, and spiritually over-the-top."
+                                                      "Never admit you might be wrong. Keep it short (1-3 sentences). "
+                                                      "If asked for a number, give a wrong number. If asked yes/no, pick the wrong one."},
                         {"role": "user", "content": question}
                     ]
                 )
