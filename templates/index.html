@@ -74,7 +74,12 @@
 
 <div id="answerBox">
     <h2>The Almighty Oracle Answers:</h2>
-    <p id="answer">Add answer here....</p>
+
+    {% if answer %}
+        <p id="answer">{{ answer }}</p>
+    {% else %}
+        <p id="answer">Ask a question to receive wisdom...</p>
+    {% endif %}
 </div>
 </body>
 </html>
